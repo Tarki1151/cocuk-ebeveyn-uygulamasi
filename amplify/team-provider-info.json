@@ -1,0 +1,33 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cocukebeveynuygulama-dev-595ac-authRole",
+      "UnauthRoleArn": "arn:aws:iam::241346335287:role/amplify-cocukebeveynuygulama-dev-595ac-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::241346335287:role/amplify-cocukebeveynuygulama-dev-595ac-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-cocukebeveynuygulama-dev-595ac-deployment",
+      "UnauthRoleName": "amplify-cocukebeveynuygulama-dev-595ac-unauthRole",
+      "StackName": "amplify-cocukebeveynuygulama-dev-595ac",
+      "StackId": "arn:aws:cloudformation:us-east-1:241346335287:stack/amplify-cocukebeveynuygulama-dev-595ac/c26f2130-facc-11ef-bcd0-0ebf9939def7",
+      "AmplifyAppId": "d1g7gwctwl0pfo",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-cocukebeveynuygulama-dev-595ac-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "auth": {
+        "cocukebeveynuygulama6f4ba5b9": {}
+      },
+      "function": {
+        "cocukebeveynuygulama6f4ba5b9CustomMessage": {
+          "REDIRECTURL": "",
+          "EMAILSUBJECT": "Ebeveyn email kontrol",
+          "EMAILMESSAGE": "Merhaba, Ebeveyn kontrol uygulamasına giriş için adresinizi doğrulamanız gerekiyor. Eğer siz kayıt olduysanız linki tıklayın lütfen.",
+          "deploymentBucketName": "amplify-cocukebeveynuygulama-dev-595ac-deployment",
+          "s3Key": "amplify-builds/cocukebeveynuygulama6f4ba5b9CustomMessage-5237497a4b63464b416d-build.zip"
+        }
+      },
+      "api": {
+        "cocukEbeveynAPI": {}
+      }
+    }
+  }
+}

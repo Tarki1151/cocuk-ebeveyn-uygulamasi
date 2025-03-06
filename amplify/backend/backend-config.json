@@ -1,0 +1,125 @@
+{
+  "api": {
+    "cocukEbeveynAPI": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "cocukebeveynuygulama6f4ba5b9"
+        }
+      ],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [],
+          "defaultAuthentication": {
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authcocukebeveynuygulama6f4ba5b9"
+            }
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
+  "auth": {
+    "cocukebeveynuygulama6f4ba5b9": {
+      "customAuth": false,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "cocukebeveynuygulama6f4ba5b9CustomMessage",
+          "triggerProvider": "Cognito"
+        }
+      ],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL",
+          "FAMILY_NAME",
+          "GIVEN_NAME",
+          "PREFERRED_USERNAME",
+          "PROFILE"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "cocukebeveynuygulama6f4ba5b9CustomMessage": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "hosting": {
+    "S3AndCloudFront": {
+      "providerPlugin": "awscloudformation",
+      "service": "S3AndCloudFront"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_cocukebeveynuygulama6f4ba5b9CustomMessage_EMAILMESSAGE": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "cocukebeveynuygulama6f4ba5b9CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_cocukebeveynuygulama6f4ba5b9CustomMessage_EMAILSUBJECT": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "cocukebeveynuygulama6f4ba5b9CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_cocukebeveynuygulama6f4ba5b9CustomMessage_REDIRECTURL": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "cocukebeveynuygulama6f4ba5b9CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_cocukebeveynuygulama6f4ba5b9CustomMessage_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "cocukebeveynuygulama6f4ba5b9CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_cocukebeveynuygulama6f4ba5b9CustomMessage_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "cocukebeveynuygulama6f4ba5b9CustomMessage"
+        }
+      ]
+    }
+  }
+}

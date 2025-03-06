@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "cocukEbeveynAPI",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authcocukebeveynuygulama6f4ba5b9",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

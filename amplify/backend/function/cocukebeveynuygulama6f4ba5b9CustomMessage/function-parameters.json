@@ -1,0 +1,16 @@
+{
+  "trigger": true,
+  "modules": [
+    "verification-link"
+  ],
+  "parentResource": "cocukebeveynuygulama6f4ba5b9",
+  "functionName": "cocukebeveynuygulama6f4ba5b9CustomMessage",
+  "resourceName": "cocukebeveynuygulama6f4ba5b9CustomMessage",
+  "parentStack": "auth",
+  "triggerEnvs": "[\n  {\n    \"key\": \"RESOURCENAME\",\n    \"value\": \"resourceName\"\n  }\n]",
+  "triggerDir": "/snapshot/amplify-cli/build/node_modules/@aws-amplify/amplify-category-auth/provider-utils/awscloudformation/triggers/CustomMessage",
+  "triggerTemplate": "CustomMessage.json.ejs",
+  "triggerEventPath": "CustomMessage.event.json",
+  "roleName": "cocukebeveynuygulama6f4ba5b9CustomMessage",
+  "skipEdit": true
+}

@@ -1,0 +1,14 @@
+type User @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  name: String!
+  role: String! # "parent" veya "child"
+}
+
+type Task @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  title: String!
+  description: String
+  assignedTo: ID! # Çocuk kullanıcı ID'si
+  createdBy: ID!  # Ebeveyn kullanıcı ID'si
+  status: String! # "pending" veya "completed"
+}
