@@ -1,5 +1,10 @@
 export type AmplifyDependentResourcesAttributes = {
   "api": {
+    "RackAPI": {
+      "ApiId": "string",
+      "ApiName": "string",
+      "RootUrl": "string"
+    },
     "cocukEbeveynAPI": {
       "GraphQLAPIEndpointOutput": "string",
       "GraphQLAPIIdOutput": "string"
@@ -23,6 +28,13 @@ export type AmplifyDependentResourcesAttributes = {
       "LambdaExecutionRoleArn": "string",
       "Name": "string",
       "Region": "string"
+    },
+    "processRacks": {
+      "Arn": "string",
+      "LambdaExecutionRole": "string",
+      "LambdaExecutionRoleArn": "string",
+      "Name": "string",
+      "Region": "string"
     }
   },
   "hosting": {
@@ -35,6 +47,12 @@ export type AmplifyDependentResourcesAttributes = {
       "Region": "string",
       "S3BucketSecureURL": "string",
       "WebsiteURL": "string"
+    }
+  },
+  "storage": {
+    "rackdiagramfiles": {
+      "BucketName": "string",
+      "Region": "string"
     }
   }
 }

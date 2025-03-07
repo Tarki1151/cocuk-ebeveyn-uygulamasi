@@ -1,5 +1,19 @@
 {
   "api": {
+    "RackAPI": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "processRacks"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
     "cocukEbeveynAPI": {
       "dependsOn": [
         {
@@ -72,6 +86,11 @@
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
+    },
+    "processRacks": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
     }
   },
   "hosting": {
@@ -80,46 +99,11 @@
       "service": "S3AndCloudFront"
     }
   },
-  "parameters": {
-    "AMPLIFY_function_cocukebeveynuygulama6f4ba5b9CustomMessage_EMAILMESSAGE": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "cocukebeveynuygulama6f4ba5b9CustomMessage"
-        }
-      ]
-    },
-    "AMPLIFY_function_cocukebeveynuygulama6f4ba5b9CustomMessage_EMAILSUBJECT": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "cocukebeveynuygulama6f4ba5b9CustomMessage"
-        }
-      ]
-    },
-    "AMPLIFY_function_cocukebeveynuygulama6f4ba5b9CustomMessage_REDIRECTURL": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "cocukebeveynuygulama6f4ba5b9CustomMessage"
-        }
-      ]
-    },
-    "AMPLIFY_function_cocukebeveynuygulama6f4ba5b9CustomMessage_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "cocukebeveynuygulama6f4ba5b9CustomMessage"
-        }
-      ]
-    },
-    "AMPLIFY_function_cocukebeveynuygulama6f4ba5b9CustomMessage_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "cocukebeveynuygulama6f4ba5b9CustomMessage"
-        }
-      ]
+  "storage": {
+    "rackdiagramfiles": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
     }
   }
 }

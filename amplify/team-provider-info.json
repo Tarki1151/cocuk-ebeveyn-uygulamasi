@@ -23,7 +23,8 @@
           "EMAILMESSAGE": "Merhaba, Ebeveyn kontrol uygulamasına giriş için adresinizi doğrulamanız gerekiyor. Eğer siz kayıt olduysanız linki tıklayın lütfen.",
           "deploymentBucketName": "amplify-cocukebeveynuygulama-dev-595ac-deployment",
           "s3Key": "amplify-builds/cocukebeveynuygulama6f4ba5b9CustomMessage-5237497a4b63464b416d-build.zip"
-        }
+        },
+        "processRacks": {}
       },
       "api": {
         "cocukEbeveynAPI": {}
