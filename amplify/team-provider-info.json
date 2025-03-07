@@ -27,6 +27,9 @@
       },
       "api": {
         "cocukEbeveynAPI": {}
+      },
+      "hosting": {
+        "S3AndCloudFront": {}
       }
     }
   }
