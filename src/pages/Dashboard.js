@@ -53,7 +53,7 @@ function Dashboard() {
 
   return (
     <div style={{ padding: '20px' }}>
-      <h1>{userRole === 'parent' ? 'Ebeveyn Paneli' : 'Cocuk Paneli'}</h1>
+      <h1>{userRole === 'parent' ? 'Ebeveyn Paneli' : 'Çocuk Paneli'}</h1>
       {userRole === 'parent' && (
         <div>
           <h2>Yeni Görev Oluştur</h2>
